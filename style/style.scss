@@ -1,0 +1,361 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  position: relative;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+header {
+  div.fixed-bar {
+    display: flex;
+    width: 100%;
+    padding: 3rem 0rem 1rem 3rem;
+
+    img {
+      width: 10%;
+      height: 10%;
+      border-radius: 50%;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      margin-left: 2rem;
+      h1 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  nav {
+    width: 100%;
+
+    ul {
+      padding: 1.5rem;
+      width: 30%;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+
+      li {
+        font-size: 1.3rem;
+
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            color: #e08958;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+  section.left {
+    flex: 1 1 300px;
+    padding-left: 3rem;
+    div.option {
+      margin-bottom: 2rem;
+    }
+    hr {
+      margin-bottom: 1rem;
+      width: 25rem;
+    }
+    ul {
+      li {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  section.right {
+    flex: 3 1 300px;
+    div.option {
+      margin-bottom: 2rem;
+    }
+    hr {
+      margin-bottom: 1rem;
+      width: 25rem;
+    }
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+    ul {
+      li {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  section.list {
+    display: flex;
+    margin-left: 10rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      color: black;
+      width: 20vw;
+      margin-right: 3rem;
+      margin-top: 1rem;
+
+      img {
+        width: 105%;
+        height: 90%;
+        border-radius: 2%;
+      }
+      div.title {
+        width: 105%;
+        font-size: 1.2rem;
+      }
+    }
+    div.third {
+      width: 60vw;
+      h2 {
+        margin-top: 3rem;
+      }
+      ul {
+        color: #0b9890;
+        font-size: large;
+        margin-bottom: 1rem;
+
+        li {
+          color: black;
+          margin-left: 2rem;
+          font-size: medium;
+        }
+      }
+    }
+  }
+
+  div.hidden {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    background-color: #a2a2a27e;
+    z-index: 999;
+    visibility: hidden;
+
+    div.hidden-container {
+      margin: 8rem 15rem 0 15rem;
+      background-color: #f1f1f1;
+      padding-left: 5rem;
+    }
+
+    div.closed {
+      position: flex;
+      text-align: right;
+      justify-content: center;
+      align-items: center;
+      img {
+        cursor: pointer;
+        scale: 0.5;
+      }
+    }
+    p {
+      padding-right: 5rem;
+    }
+    div.figure-content {
+      padding-right: 5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: space-around;
+
+      figure.item {
+        flex: 0 0 40%; /* 關鍵：設定寬度為 50% 扣除間距 */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+        img {
+          max-width: 20vw;
+          max-height: 60vh;
+        }
+        figcaption {
+          margin-top: 5px;
+          font-size: 14px;
+          color: #333;
+          font-size: large;
+          text-align: left;
+        }
+      }
+    }
+    ul {
+      margin-top: 1rem;
+      li {
+        margin-left: 2.5rem;
+      }
+    }
+    .title {
+      margin-top: 1.5rem;
+    }
+    video {
+      width: 50vw;
+    }
+  }
+  div.display {
+    visibility: visible;
+  }
+
+  section.picture {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      width: 30vw;
+    }
+    div.orangeRect {
+      width: 30vw;
+      height: 80vh;
+      background-color: #e08958;
+      position: absolute;
+      top: 50px;
+      left: 80px;
+      z-index: -1;
+    }
+  }
+
+  section.form {
+    flex: 1 1 600px;
+    form {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 1.5rem;
+
+      div {
+        margin: 0.5rem;
+        label {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+        input,
+        textarea {
+          background-color: #d7814fd9;
+          color: white;
+          font-size: 1.25rem;
+          padding: 0.25rem;
+          border: none;
+          width: 80%;
+        }
+        textarea {
+          vertical-align: top;
+        }
+      }
+      button {
+        align-self: center;
+        background-color: #e08958;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 1.75rem 1.5rem;
+        font-size: 2rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  div.line {
+    background-color: gray;
+    width: 3px;
+  }
+
+  section.contact {
+    flex: 1 1 500px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  div.content {
+    h2 {
+      margin: 3rem 1rem;
+    }
+  }
+}
+
+footer {
+  a {
+    padding: 1rem;
+  }
+}
+
+.active {
+  color: #e08958;
+}
+
+// max-width設1100px是因為上面section left和right的flex加起來等於1100px
+@media screen and (max-width: 1100px) {
+  .orange {
+    opacity: 0.5;
+  }
+  header {
+    nav {
+      ul {
+        width: 100%;
+        flex-direction: column;
+        li {
+          padding: 1rem 0rem;
+          border-bottom: 2px solid gray;
+        }
+      }
+    }
+  }
+  main {
+    section.right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+
+      img {
+        position: static;
+        transform: none;
+        width: 50vw;
+        height: 50vw;
+      }
+    }
+    figure.item {
+      flex: 0 0 100%;
+    }
+    section.picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 60vw;
+      }
+      div.orangeRect {
+        display: none;
+      }
+    }
+  }
+
+  div.line {
+    display: none;
+  }
+}
